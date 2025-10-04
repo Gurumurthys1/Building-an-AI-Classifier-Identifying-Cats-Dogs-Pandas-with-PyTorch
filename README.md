@@ -18,7 +18,7 @@ The project follows these steps:
 
 ## ⚡ Dataset  
 We used the dataset:  
-👉 [Cats, Dogs, Pandas Dataset on Kaggle](https://www.kaggle.com/datasets/gpiosenka/cats-dogs-pandas-images)  
+👉 [Cats, Dogs, Pandas Dataset on Kaggle]((https://www.kaggle.com/datasets/ashishsaxena2209/animal-image-datasetdog-cat-and-panda?utm_source=chatgpt.com))  
 
 Download inside your notebook/repo:  
 ```bash
