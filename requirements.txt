@@ -1,6 +1,5 @@
-torch==2.0.1+cpu
-torchvision==0.15.2+cpu
--f https://download.pytorch.org/whl/torch_stable.html
+torch==2.9.0
+torchvision==0.24.0
 streamlit==1.28.0
 pillow==10.0.0
 numpy==1.24.3
