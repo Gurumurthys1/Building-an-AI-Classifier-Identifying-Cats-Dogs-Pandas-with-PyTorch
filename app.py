@@ -11,34 +11,62 @@ st.set_page_config(page_title="Animal Classifier", page_icon="🐾", layout="wid
 # Custom CSS for better styling
 st.markdown("""
 <style>
+    /* Main background and text */
     .main {
-        background-color: #f8f9fa;
+        background-color: #000000;
+        color: #ffffff;
     }
+
+    /* Headings and paragraphs */
+    h1, h2, h3, h4, h5, h6, p, span, div {
+        color: #ffffff !important;
+    }
+
+    /* Buttons */
     .stButton>button {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        border: none;
+        background-color: #222222;
+        color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #555555;
+        padding: 0.6rem 1.2rem;
         cursor: pointer;
     }
+
     .stButton>button:hover {
-        background-color: #45a049;
+        background-color: #333333;
+        border: 1px solid #888888;
     }
+
+    /* Uploaded image box */
     .uploaded-image {
         max-width: 100%;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 8px rgba(255,255,255,0.1);
     }
+
+    /* Result box */
     .result-box {
         padding: 20px;
-        background-color: #ffffff;
+        background-color: #111111;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 8px rgba(255,255,255,0.1);
         margin-top: 20px;
+        color: #ffffff;
+    }
+
+    /* Progress bar style */
+    .stProgress > div > div > div > div {
+        background-color: #4CAF50;
+    }
+
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #0d0d0d;
+        color: #ffffff;
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 # Load the pre-trained ResNet18 model
 @st.cache_resource
