@@ -1,0 +1,11 @@
+torch
+torchvision
+streamlit
+pillow
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+ipykernel
+memory-profiler
