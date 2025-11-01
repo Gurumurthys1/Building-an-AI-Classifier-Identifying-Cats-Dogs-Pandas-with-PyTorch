@@ -24,7 +24,7 @@ The project includes:
 ### Hugging Face Spaces (Live Demo)
 The model is deployed and available for public use on Hugging Face Spaces:
 
-👉 **[Try the Live Demo](https://huggingface.co/spaces/Gurumurthy1/Animal-Classifier-Cats-Dogs-and-Pandas)**
+👉 **[Try the Live Demo](https://huggingface.co/spaces/Gurumurthy1/animal-classifier)**
 
 ### Deploy Your Own Version
 
