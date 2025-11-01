@@ -18,6 +18,94 @@ The project includes:
 6. **Single Image Prediction** – Test function for individual images  
 
 ---
+---
+## 🚀 Deployment
+
+### Hugging Face Spaces (Live Demo)
+The model is deployed and available for public use on Hugging Face Spaces:
+
+👉 **[Try the Live Demo](https://huggingface.co/spaces/Gurumurthy1/Animal-Classifier-Cats-Dogs-and-Pandas)**
+
+### Deploy Your Own Version
+
+#### Option 1: Deploy to Hugging Face Spaces
+
+1. **Create a Hugging Face Account**
+   - Sign up at [huggingface.co](https://huggingface.co)
+
+2. **Create a New Space**
+   - Go to your profile → Spaces → Create new Space
+   - Choose **Streamlit** as the SDK
+   - Set visibility (Public/Private)
+
+3. **Upload Your Files**
+```bash
+   git clone https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
+   cd YOUR_SPACE_NAME
+   
+   # Copy your files
+   cp app.py .
+   cp requirement.txt .
+   cp -r your_model_files .
+   
+   # Commit and push
+   git add .
+   git commit -m "Initial deployment"
+   git push
+```
+
+4. **Configure the Space**
+   - Add a `README.md` header:
+```yaml
+   ---
+   title: Animal Classifier
+   emoji: 🐾
+   colorFrom: blue
+   colorTo: purple
+   sdk: streamlit
+   sdk_version: 1.28.0
+   app_file: app.py
+   pinned: false
+   ---
+```
+
+#### Option 2: Deploy to Streamlit Cloud
+
+1. **Push to GitHub**
+```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin YOUR_GITHUB_REPO_URL
+   git push -u origin main
+```
+
+2. **Deploy on Streamlit Cloud**
+   - Go to [share.streamlit.io](https://share.streamlit.io)
+   - Click "New app"
+   - Connect your GitHub repository
+   - Select branch and file (`app.py`)
+   - Click "Deploy"
+
+#### Option 3: Docker Deployment
+
+1. **Create Dockerfile**
+```dockerfile
+   FROM python:3.9-slim
+   
+   WORKDIR /app
+   
+   COPY requirement.txt .
+   RUN pip install --no-cache-dir -r requirement.txt
+   
+   COPY . .
+   
+   EXPOSE 8501
+   
+   CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+```
+
+
 
 ## ⚡ Dataset  
 We used the dataset:  
